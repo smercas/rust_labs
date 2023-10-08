@@ -1,0 +1,1 @@
+C:\Users\Stefan\Desktop\rust\rust_labs\lab01\target\debug\lab01.exe: C:\Users\Stefan\Desktop\rust\rust_labs\lab01\src\main.rs C:\Users\Stefan\Desktop\rust\rust_labs\lab01\src\p1.rs C:\Users\Stefan\Desktop\rust\rust_labs\lab01\src\p2.rs C:\Users\Stefan\Desktop\rust\rust_labs\lab01\src\p3.rs
