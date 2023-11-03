@@ -1,11 +1,9 @@
-use thiserror::Error;
-
 pub mod p1;
 pub mod p2;
 pub mod p3;
 pub mod p4;
 
-#[derive(Error, Debug)]
+#[derive(thiserror::Error, Debug)]
 enum Error {
     #[error("{}", 0)]
     P1Error(#[from] std::io::Error),
@@ -14,7 +12,7 @@ enum Error {
     #[error("{}", 0)]
     P3Error(#[from] p3::Error),
     #[error("{}", 0)]
-    P4Error(#[from] p4::Error)
+    P4Error(#[from] p4::Error),
 }
 
 fn main() -> Result<(), Error> {
