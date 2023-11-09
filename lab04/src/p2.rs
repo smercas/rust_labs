@@ -1,10 +1,10 @@
 #[derive(thiserror::Error, Debug)]
 pub enum Error {
-  #[error("{} is not an ascii character", 0)]
-  NotAscii(char),
-  #[error("{}", 0)]
-  IoError(#[from] std::io::Error)
-}
+    #[error("{} is not an ascii character", 0)]
+    NotAscii(char),
+    #[error("{}", 0)]
+    IoError(#[from] std::io::Error)
+    }
 
 fn encrypt(c: &mut char) -> Result<(), Error> {
     if !c.is_ascii() {
