@@ -138,11 +138,27 @@ impl<X: Into<Complex>> std::ops::DivAssign<X> for Complex {
     how can I implement this?
 */
 
-impl<X: Into<f64>> From<X> for Complex {
-    fn from(value: X) -> Self {
+// impl<X: Into<f64>> From<X> for Complex {
+//     fn from(value: X) -> Self {
+//         Complex {
+//             real: value.into(),
+//             imag: 0.0,
+//         }
+//     }
+// }
+impl<T> From<T> for Complex where f64: From<T> {
+    fn from(value: T) -> Self {
         Complex {
             real: value.into(),
-            imag: 0.0,
+            imag: 0,
+        }
+    }
+}
+impl From<(f64,f64)> for Complex {
+    fn from(value: (f64,f64)) -> Self {
+        Complex {
+            real: value.0,
+            imag: value.1
         }
     }
 }
